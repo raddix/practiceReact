@@ -8,7 +8,7 @@ export default function StateHook() {
 
   return (
     <div>
-        <h1>Hello the current count is : {count}</h1>
+        <h1>Hello the current number count is : {count}</h1>
         <button onClick={()=>setCount(count+1)}>Click Me</button>
     </div>
   )
