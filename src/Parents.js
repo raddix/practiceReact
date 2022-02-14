@@ -1,11 +1,16 @@
-import React from 'react'
-import Child from './Child'
-
+import React, { useState } from "react";
+import Child from "./Child";
 
 export default function Parents() {
+  const [option, setOption] = useState("");
+
+  function handleSelectedValue(value) {
+    setOption(value);
+  }
   return (
     <div>
-        <h1>Hello this is parent</h1>
+      <Child handleSelectedValue={handleSelectedValue} />
+      <h1>Selected option is {option}</h1>
     </div>
-  )
+  );
 }
